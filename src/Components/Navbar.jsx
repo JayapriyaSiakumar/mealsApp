@@ -3,9 +3,7 @@ import { Link } from "react-router-dom";
 
 const Navbar = () => {
   const [openNav, setOpenNav] = useState(false);
-  const toggleNav = () => {
-    setOpenNav(!openNav);
-  };
+
   return (
     <nav className="bg-linear-to-r from-lime-400 to-lime-500 border-gray-300 dark:bg-gray-900">
       <div className="max-w-7xl flex flex-wrap items-center justify-between mx-auto p-4">
@@ -17,7 +15,7 @@ const Navbar = () => {
         <button
           data-collapse-toggle="navbar-default"
           type="button"
-          onClick={toggleNav}
+          onClick={() => setOpenNav(!openNav)}
           className="inline-flex items-center border-none p-2 w-10 h-10 justify-center text-sm text-body rounded-base md:hidden hover:bg-neutral-secondary-soft hover:text-heading focus:outline-none focus:ring-2 focus:ring-neutral-tertiary"
           aria-controls="navbar-default"
           aria-expanded="false">
@@ -43,9 +41,14 @@ const Navbar = () => {
           className="items-center justify-between  w-full md:flex md:w-auto"
           id="navbar-search">
           <ul
-            className={`flex sm:${
-              openNav ? "flex-col" : "hidden"
-            }   p-4 md:p-0 mt-4 font-bold font-stretch-90% text-lg border border-gray-100 rounded-lg bg-transparent md:flex-row md:space-x-8 md:mt-0 md:border-0 md:bg-transparent dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700`}>
+            className={`${openNav ? "flex" : "hidden"}
+            flex-col mt-2
+            md:flex md:flex-row
+             md:static
+            top-16 left-0
+            w-full md:w-auto           
+            p-4 md:p-0
+            font-bold text-lg border border-gray-100 rounded-lg bg-transparent  md:space-x-8 md:mt-0 md:border-0 md:bg-transparent dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700`}>
             <li>
               <Link
                 to="/"
