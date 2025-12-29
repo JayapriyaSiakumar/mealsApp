@@ -88,7 +88,7 @@ const RecipeDetails = () => {
                 onClick={toggleFavorite}
                 className="px-4 py-2 bg-lime-500 hover:bg-lime-600 text-white text-lg rounded-xl">
                 <span className="font-bold text-xl">
-                  {isFav ? "❤ Remove Favorite" : "🤍 Add To Favorite"}
+                  {isFav ? "❤️ Remove Favorite" : "🤍 Add To Favorite"}
                 </span>
               </button>
             </div>
