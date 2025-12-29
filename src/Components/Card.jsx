@@ -29,7 +29,7 @@ const Card = ({ recipe }) => {
           type="button"
           onClick={toggleFavorite}
           className="cursor-pointer text-sm absolute top-0 right-0 bg-lime-400 px-4 text-white rounded-full h-12 w-12 flex flex-col items-center justify-center mt-3 mr-3 hover:bg-white hover:text-lime-600 transition duration-500 ease-in-out">
-          <span className="font-bold text-xl">{isFav ? "❤" : "🤍"}</span>
+          <span className="font-bold text-xl">{isFav ? "❤️" : "🤍"}</span>
         </button>
       </div>
       <div className="flex justify-between items-center gap-4">
